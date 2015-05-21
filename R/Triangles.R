@@ -4,7 +4,7 @@
 
 incr2cum <- function(Triangle, na.rm=FALSE){
   if(na.rm){
-    upper <- col(Triangle) <= ncol(Triangle) + 1 - row(Triangle)
+    upper <- col(Triangle) <= nrow(Triangle) + 1 - row(Triangle)
     upperna <- which(is.na(Triangle[upper]), arr.ind=TRUE)
     
     Triangle[upper][upperna] <- 0
